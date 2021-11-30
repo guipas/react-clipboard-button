@@ -8,7 +8,10 @@ function App() {
   return (
     <div className="App">
       Demo (todo)
-      <CopyToClipboardButton text={`Test ${new Date()}`}/>
+      <CopyToClipboardButton 
+        text={`Test ${new Date()}`}
+        onSuccess={() => console.log('success')}
+      />
     </div>
   )
 }

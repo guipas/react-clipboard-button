@@ -1,7 +1,9 @@
 {
-  "name": "react-clipboard-button",
-  "version": "0.0.0",
-  "files": ["dist"],
+  "name": "@guipas/react-clipboard-button",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/lib.umd.js",
   "module": "./dist/lib.es.js",
   "exports": {
@@ -21,6 +23,7 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
+    "@types/node": "^16.11.11",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@vitejs/plugin-react": "^1.0.0",
