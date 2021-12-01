@@ -1,6 +1,6 @@
 {
-  "name": "@guipas/react-clipboard-button",
-  "version": "0.0.1",
+  "name": "react-clipboard-button",
+  "version": "0.0.2",
   "files": [
     "dist"
   ],
@@ -23,11 +23,17 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
+    "highlight.js": "^11.3.1",
+    "react-hot-toast": "^2.1.1",
     "@types/node": "^16.11.11",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@vitejs/plugin-react": "^1.0.0",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guipas/react-clipboard-button.git"
   }
 }
