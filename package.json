@@ -1,12 +1,13 @@
 {
   "name": "react-clipboard-button",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "main": "./dist/lib.umd.js",
   "module": "./dist/lib.es.js",
-  "types": "./types",
+  "types": "./types/lib.d.ts",
   "exports": {
     ".": {
       "import": "./dist/lib.es.js",

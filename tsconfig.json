@@ -15,8 +15,8 @@
     "isolatedModules": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "types",
+    "outDir": "./types",
     "jsx": "react-jsx"
   },
-  "include": ["./src"]
+  "include": ["src/lib.tsx"]
 }

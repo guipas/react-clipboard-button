@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/CopyToClipboard.tsx'),
+      entry: path.resolve(__dirname, 'src/lib.tsx'),
       name: 'CopyToClipboard',
       fileName: (format) => `lib.${format}.js`
     },

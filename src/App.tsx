@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
-import { CopyToClipboardButton, CopyToClipboardWrapper } from './CopyToClipboard'
+import { CopyToClipboardButton, CopyToClipboardWrapper } from './lib'
 import hljs from 'highlight.js';
 import { Toast, toast, Toaster} from 'react-hot-toast';
 
