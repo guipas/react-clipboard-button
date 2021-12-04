@@ -6,6 +6,8 @@ type CopyToClipboardProps = {
   onSuccess?: (e: ClipboardJS.Event) => void; 
   onError?: (e: ClipboardJS.Event) => void; 
   style?: React.CSSProperties;
+  className?: string;
+  title?: string;
 }
 
 export const CopyToClipboardButton: React.FC<CopyToClipboardProps> = props => {
@@ -30,7 +32,7 @@ export const CopyToClipboardButton: React.FC<CopyToClipboardProps> = props => {
 
 
   return (
-    <span ref={ref} style={props.style}>
+    <span ref={ref} style={props.style} className={props.className} title={props.title}>
       {props.children}
     </span>
   )
