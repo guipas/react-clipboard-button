@@ -8,6 +8,7 @@ type CopyToClipboardProps = {
   style?: React.CSSProperties;
   className?: string;
   title?: string;
+  children?: React.ReactNode;
 }
 
 export const CopyToClipboardButton: React.FC<CopyToClipboardProps> = props => {
