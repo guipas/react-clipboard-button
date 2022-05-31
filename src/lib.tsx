@@ -2,12 +2,13 @@ import ClipboardJS from "clipboard";
 import { useEffect, useRef } from "react";
 
 type CopyToClipboardProps = {
-  text: string; 
-  onSuccess?: (e: ClipboardJS.Event) => void; 
-  onError?: (e: ClipboardJS.Event) => void; 
+  text: string;
+  onSuccess?: (e: ClipboardJS.Event) => void;
+  onError?: (e: ClipboardJS.Event) => void;
   style?: React.CSSProperties;
   className?: string;
   title?: string;
+  children?: React.ReactNode;
 }
 
 export const CopyToClipboardButton: React.FC<CopyToClipboardProps> = props => {
@@ -46,11 +47,11 @@ export const CopyToClipboardWrapper: React.FC<CopyToClipboardWrapperProps> = (pr
     <div style={{ position: 'relative' }}>
       <CopyToClipboardButton
         {...props}
-        style={{ 
+        style={{
           position: 'absolute',
           top: '5px',
           right: '5px',
-          ...props.style, 
+          ...props.style,
         }}
       >
         {props.button}
