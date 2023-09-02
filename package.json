@@ -10,13 +10,19 @@
   "types": "./types/lib.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/lib.es.js",
-      "require": "./dist/lib.umd.js"
+      "import": {
+        "types": "./types/lib.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./types/lib.d.ts",
+        "default": "./dist/lib.umd.js"
+      }
     }
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && attw --pack",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -27,6 +33,7 @@
     "react-dom": "^17 || ^18"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.9.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "highlight.js": "^11.3.1",
@@ -35,6 +42,8 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@vitejs/plugin-react": "^1.0.0",
+    "highlight.js": "^11.3.1",
+    "react-hot-toast": "^2.1.1",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
   },
