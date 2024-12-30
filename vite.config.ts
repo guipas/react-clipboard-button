@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: 'src/lib.tsx',
       name: 'CopyToClipboard',
-      fileName: (format) => `lib.${format}.js`
+      fileName: (format) => `lib.${format}.${format === "umd" ? "cjs" : "js"}`
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

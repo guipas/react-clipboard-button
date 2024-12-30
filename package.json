@@ -6,7 +6,7 @@
     "types"
   ],
   "type": "module",
-  "main": "./dist/lib.umd.js",
+  "main": "./dist/lib.umd.cjs",
   "module": "./dist/lib.es.js",
   "types": "./types/lib.d.ts",
   "exports": {
@@ -17,13 +17,13 @@
       },
       "require": {
         "types": "./types/lib.d.ts",
-        "default": "./dist/lib.umd.js"
+        "default": "./dist/lib.umd.cjs"
       }
     }
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && attw --pack --profile esm-only",
+    "build": "tsc && vite build && attw --pack",
     "serve": "vite preview"
   },
   "dependencies": {
