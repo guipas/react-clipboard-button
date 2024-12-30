@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import "./App.css";
 import { CopyToClipboardButton, CopyToClipboardWrapper } from "./lib";
 import hljs from "highlight.js";
 import { Toast, toast, Toaster } from "react-hot-toast";
