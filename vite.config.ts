@@ -1,8 +1,18 @@
+import { copyFileSync } from 'node:fs';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      outDir: "types",
+      afterBuild: () => {
+        copyFileSync("types/lib.d.ts", "types/lib.d.cts");
+      }
+    })
+  ],
   build: {
     lib: {
       entry: 'src/lib.tsx',
