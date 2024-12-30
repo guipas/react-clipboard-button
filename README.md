@@ -2,7 +2,7 @@
 
 ## react-clipboard-button
 
-- [x] very light (~22KB not minified)
+- [x] very light (~1.2KB not minified)
 - [x] only one dependency ([clipboard.js](https://clipboardjs.com/))
 - [x] compatibel with IE11+
 
