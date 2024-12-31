@@ -14,7 +14,7 @@ type CopyToClipboardProps = {
 export const CopyToClipboardButton: React.FC<CopyToClipboardProps> = (
   props
 ) => {
-  const ref = useRef<any>();
+  const ref = useRef<any>(undefined);
 
   useEffect(() => {
     if (ref) {

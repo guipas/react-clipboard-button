@@ -1,22 +1,32 @@
+import { copyFileSync } from 'node:fs';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path';
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      outDir: "types",
+      afterBuild: () => {
+        copyFileSync("types/lib.d.ts", "types/lib.d.cts");
+      }
+    })
+  ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/lib.tsx'),
+      entry: 'src/lib.tsx',
       name: 'CopyToClipboard',
-      fileName: (format) => `lib.${format}.js`
+      fileName: (format) => `lib.${format}.${format === "umd" ? "cjs" : "js"}`
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ['react'],
+      external: ['react', 'react-dom', /^react\//, 'clipboard'],
       output: {
         globals: {
-          vue: 'React'
+          vue: 'React',
+          react: 'React',
         }
       }
     }

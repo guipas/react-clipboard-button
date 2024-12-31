@@ -1,9 +1,7 @@
 import React from "react";
-import { useState } from "react";
-import "./App.css";
 import { CopyToClipboardButton, CopyToClipboardWrapper } from "./lib";
 import hljs from "highlight.js";
-import { Toast, toast, Toaster } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 
 import "highlight.js/styles/monokai-sublime.css";
 import { ClipboardIcon } from "./components/ClipboardIcon";
